@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141689378-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141689378-1');
+</script>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+
+    <title>John Hampton</title>
+    <meta charset="UTF-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="John Hampton design illustration production" name=
+    "description">
+    <meta content="John Hampton" name="author"><!-- Mobile Specific Metas
+  ================================================== -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- CSS
+  ================================================== -->
+    <link href="../../css/fonts-stylesheet.css" rel="stylesheet" type=
+    "text/css">
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="../../css/style-ie.css" />
+<![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" href="../../css/style-ie.css" />
+<![endif]-->
+    <!-- Fonts
+  ================================================== -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Lora:400,400i,700,700i"
+    rel="stylesheet" type="text/css">
+    <link href="../../css/prism.css" rel="stylesheet" type="text/css">
+    <script src="../../css/prism.js" type="text/javascript"></script><!-- Javascript
+    ================================================== -->
+    <!--[if lt IE 9]>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+$(function() {
+    $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+            $('#toTop').fadeIn();   
+        } else {
+            $('#toTop').fadeOut();
+        }
+    });
+
+    $('#toTop').click(function() {
+        $('body,html').animate({scrollTop:0},800);
+    }); 
+    });
+    </script>
+</head>
+
+<body class="article-page">
+    <div id="toTop">
+        Back to Top
+    </div><!-- header starts   -->
+
+    <header class="global group entry">
+        <img alt="" id="logo1" src="../../images/logo/JH_logo2-39.png">
+
+        <nav>
+            <ul id="navlist">
+                <li><a class="page" href="../../index.html">journal</a></li>
+
+                <li><a href="../../about.html" id="aboutpage">about</a></li>
+            </ul>
+        </nav>
+    </header><!-- header ends   -->
+
+    <article class="black devices1">
+        <img class="bg widescreen-bg"
+        src="../../images/excerpts/devices.jpg" alt="">
+
+        <div class="article-preview group">
+            <div class="picpost-text-left">
+                <div class="date">
+                    01.09.12
+                </div>
+
+                <h1>Device Targeted Email Content</h1>
+
+                <p>Finding a solution to a problem that demanded serving
+                different content to desktop and mobile users &#8230;</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="group main">
+        <p class="intro"><a href=
+        "../device-specific-email-content-2/index.html">N.B. a better method
+        now exists -see part ii</a></p>
+
+        <p class="intro">Last year I discovered a useful technique whilst
+        solving a problem that demanded serving differing content to desktop
+        and mobile users from the same email. It employs similar methods that
+        I've since used to implement Net-a-porter's first adaptive mobile header
+        and footers.</p>
+
+        <p>The ctas of an email were directing subscribers to areas of the
+        client's website that could not be accessed properly by mobile and
+        tablet users without an annoying trail of redirects.</p>
+
+        <p>The long term solution of replacing the areas of the site that
+        utilised flash wasn't going to happen over night. So the challenge was
+        to come up with an interim solution that enabled an alternate cta for
+        mobile devices (i.e. mail apps which support for media queries)- ipad
+        and iphone being highly popular amongst the subscriber
+        base.</p><img alt=" " class="article-img article-img-caption" src=
+        "../../images/articles/Issue-both3.jpg">
+
+        <p class="caption">Net-a-porter's Issue Email. On the right the
+      version with alternate cta that appeared for media query friendly mobile apps. </p>
+
+        <h3>Hiding content in desktop/webmail</h3>
+
+        <p>Usually it probably doesn't make a great deal of sense to have a lot
+        of alternate device-specific content in one email. It doesn't really
+        fit with the ethic of streamlining content for mobile either. However
+        the extra kb required wasn't so great that it pushed the download
+        weight up or above the average email in it's field.</p>
+
+        <p>In this particular case, it was trialled and subscriber response was
+        enough to validate it as a temporary solution to improve experience and
+        conversion rate/ engagement.</p>
+
+        <p>Used judiciously the ability to hide certain content on
+        desktop/webmail clients feels like a useful tool in the armoury.</p>
+
+        <p>The solution is not friendly to older versions of Lotus Notes but,
+        in this case, the indications were Lotus users made up was a minimal
+        (&gt;0.05%) proportion of subscribers.</p>
+
+        <p>The second caveat is, as there's no javascript employed, the layout
+        changes are occurring client-side so we're manipulating content to
+        appear and disappear using media queries but not preventing it from
+        being downloaded when not required. So mail-app specific content is
+        really what we're creating.</p>
+
+        <h3>EOA Method</h3>
+
+        <p>I began by exploring an approach offered by <a target="_blank" href=
+        "https://www.emailonacid.com/forum/viewthread/156/#477">Email on
+        Acid</a> based around wrapping image content in divs that can be
+        displayed or hidden using media queries.</p>
+
+        <h5>CSS</h5>
+        <pre>
+<code class="language-css">@media only screen and (max-device-width:480px) {
+    body[yahoo] .mobile_only {
+            width:600px !important;
+            overflow:visible !important;
+            float: none !important;
+             }        
+    body[yahoo] .desktop_header {
+            display:none
+        }
+} </code>
+</pre>
+
+        <h5>HTML</h5>
+        <pre>
+<code class="language-markup">&lt;body yahoo=&quot;fix&quot;&gt;
+    &lt;div class=&quot;mobile_only&quot; style=&quot;width:0px;overflow:hidden;float:left&quot;&gt;test image for mobile, width=&quot;300px&quot;&lt;/div&gt;    
+    &lt;div class=&quot;desktop_header&quot;&gt;test image for desktop width=&quot;600px&quot;&lt;/div&gt;
+&lt;/body&gt;</code>
+</pre>
+
+        <p>The stumbling block for this method seemed to be with gmail
+        retaining the space where hidden content exists and also Outlook still
+        displaying the images.</p>
+
+        <h3>Pop Up Images Method</h3>
+
+        <p>The next thought was to use css to reduce or expand image dimensions
+        depending on the device.</p>
+
+        <p> For each img tag that is to be hidden from
+        desktop view within the div wrap sizing is set to width="1". From my
+        tests this seemed to yield better results than
+      width="0" or combinations using height as a parameter . .</p>
+
+        <p>For each img tag that is to be hidden from mobile view we can assign
+        a class</p>
+
+        <p>In our media queries for each image we end up with something like
+        this:</p>
+        <pre>
+<code class="language-css">img[class=&quot;img_desktop&quot;] {
+width: 0px !important;
+height: 0px !important;
+}
+
+img[id=&quot;img_mobile&quot;] {
+width: 300px !important;
+height: 156px !important;
+}</code>
+</pre>
+
+        <p>On desktop/webmail the media queries are ignored and the mobile
+        specific images are hidden or set to a barely visible spec in OL. On
+        mobile the css shrinks the desktop images and expands the mobile
+        images.</p>
+
+        <p>This was a surprising passable solution, as a first stab, but it can
+        be improved on...</p>
+
+        <h3>Display: none</h3>
+
+        <p>Things can be made a lot simpler by setting the desktop-only images
+        or their table container to display:none so it doesn't appear on mobile
+        devices (rather than needing to individually target and shrink each
+        individual image).</p>
+
+        <p>display:none; within a div wrap also seems to work on Outlook for
+        hiding the images</p>
+
+        <p>What I came to was a combination of the two methods which can
+        probably be refined further but at least seems to work and pass
+        inspection on the inbox tests I did.</p>
+
+        <h5>CSS</h5>
+        <pre>
+<code class="language-css">body[yahoo] .mobile_only {
+overflow:visible !important;
+width: auto !important;
+height:auto !important;
+display:block !important;
+}
+</code>
+</pre>
+
+        <h5>HTML</h5>
+        <pre>
+<code class="language-markup">&lt;body yahoo=&quot;fix&quot;&gt;
+    &lt;div class=&quot;mobile_only&quot; style=&quot;display:none; width:0px; overflow:hidden;&quot;&gt;&lt;img  class=&quot;mobile_only&quot; src=&quot;image.jpg&quot; alt=&quot;&quot; width=&quot;1&quot;  border=&quot;0&quot; style=&quot;display:block&quot;&gt;    
+    &lt;div&gt;
+&lt;/body&gt; 
+</code>
+</pre>
+
+        <p>Apart from Lotus notes Some fractional extra 1-2px spacing can
+        result in OL and IE gmail, it's not pretty by any means but it's been a
+        very useful tool.</p>
+
+        <p><a href="../device-specific-email-content-2/index.html">N.B. a
+        better method now exists -see part ii</a></p>
+    </article>
+
+    <footer class="articles-all">
+      <div class="footertext group">
+            <div id="copyright">
+                copyright © John Hampton 2018
+            </div>
+        </div>
+    </footer><script src="../../css/footer.scripts.js" type="text/javascript"></script><!-- Localized -->
+</body>
+</html>

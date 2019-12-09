@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141689378-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141689378-1');
+</script>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+
+    <title>John Hampton</title>
+    <meta charset="UTF-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="John Hampton design illustration production" name=
+    "description">
+    <meta content="John Hampton" name="author"><!-- Mobile Specific Metas
+  ================================================== -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- CSS
+  ================================================== -->
+    <link href="../../css/fonts-stylesheet.css" rel="stylesheet" type=
+    "text/css">
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="../../css/style-ie.css" />
+<![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" href="../../css/style-ie.css" />
+<![endif]-->
+    <!-- Fonts
+  ================================================== -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Lora:400,400i,700,700i"
+    rel="stylesheet" type="text/css">
+    <link href="../../css/prism.css" rel="stylesheet" type="text/css">
+    <script src="../../css/prism.js" type="text/javascript"></script><!-- Javascript
+    ================================================== -->
+    <!--[if lt IE 9]>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+$(function() {
+    $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+            $('#toTop').fadeIn();   
+        } else {
+            $('#toTop').fadeOut();
+        }
+    });
+
+    $('#toTop').click(function() {
+        $('body,html').animate({scrollTop:0},800);
+    }); 
+    });
+    </script>
+</head>
+
+<body class="article-page">
+    <div id="toTop">
+        Back to Top
+    </div><!-- header starts   -->
+    <!-- header starts   -->
+
+    <header class="global group">
+        <img alt="" id="logo1" src="../../images/logo/JH_logo2-39.png">
+
+        <nav>
+            <ul id="navlist">
+                <li><a class="page" href="../../index.html">journal</a></li>
+
+                <li><a href="../../about.html" id="aboutpage">about</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="black">
+        <div class="article-preview group">
+            <div class="picpost-text-left">
+                <div class="date">
+                    27.02.13
+                </div>
+
+                <h1><span class="titles-low">Mobile Email</span> <span class=
+                "hidemob"><br></span> <span class="titles-large uppercase">Best
+                Practice</span> <span class="numb">(i)</span></h1>
+
+                <p>A refresher on some of the techniques and approaches
+                available from an angle of web standards &#8230;</p>
+            </div>
+
+            <div class="picpost-right" id="standards1">
+                
+            </div>
+        </div>
+    </article>
+
+    <article class="group main">
+      
+        <p class="intro">I was asked by a client recently "What is best
+      practice for an email on mobile?" While many ESPs offer practical guidelines, I wanted to take the opportunity to refer back to web standards for a refresher and some context. </p>
+
+        <p class="first">It's a subtle distinction but the idea being to start
+        from the perspective of fundamental principals that seek to improve experience, rather than just  reeling off the
+        latest approaches and aphorisms doing the rounds, and  to an extent working
+        backwards.</p>
+        
+<p><a target="_blank" href="https://www.email-standards.org/">The Email Standards Project </a>was launched on 2007, though I haven't registered much activity of late. Possibly following the launch of Outlook 2013 there was mass seppuku by all involved.</p>
+
+        <h3>Official Standards&nbsp;</h3>
+
+        <p>Reference to email standards on W3C reads more as a plea for action
+        for email-client developers to support web standards than a
+        comprehensive guide</p>
+
+        <p>To an extent mobile web standards can be extrapolated to the context
+        of email. The main caveat being email clients don't support web
+        standards so we're forced contextualise to the restrictions of clients,
+        browsers and mail apps. In turn we can look at the subscriber base, user
+        stats and target audience, and decide where the priorities for the
+        campaign lie&#8230;</p>
+
+        <p>For a business to be spurred into reflecting on these things is
+        ultimately beneficial and likely to yield better results than  the
+        mindset of just jumping on the must-have upgrade or feature du jour.</p>
+
+        <p>Below are a few parameters plucked from the W3C web standards page
+        and some considerations that follow on from them. A lot of the ideas
+        overlap and some are already well covered so I've kept it brief in
+      places</p>
+
+        <h2>One Web</h2>
+
+        <blockquote>
+            One Web means making, as far as is reasonable, the same information
+            and services available to users irrespective of the device they are
+            using. However, it does not mean that exactly the same information
+            is available in exactly the same representation across all devices.
+            <cite>W3 Web Standards</cite>
+        </blockquote>
+
+        <p>'One Web' is a phrase that gives off  a mawkish   cheesy wiff of coca cola style  sloganeering  but it's essentially just promoting the idea of enabling the best
+      possible experience to everyone in a practical way.</p>
+
+        <p>A few familiar design approaches that sit under the 'One Web'
+        umbrella:</p>
+
+        <ul class="list-headed">
+            <li>Progressive Enhancement
+
+                <p>Create for the lowest common denominator and spec i.e. the "Default
+                Delivery Context". Enhance the experience to "Exploit Device
+                Capabilities" where feasible.</p>
+            </li>
+
+            <li>Graceful DEGRADATION
+
+                <p>Build for the highest spec/best case scenario, then add
+                fixes to accommodate devices lower down the chain. Often
+                an appropriate choice where an existing product or format needs to be
+                maintained. </p>
+            </li>
+        </ul>
+
+        <p>What also follows is you need to be aware if the
+        handlers or enhancements being implemented have adverse affects elsewhere
+        in the chain e.g. Are your media queries written to prevent them
+        rendering the mobile layout in some webmail clients.</p>
+
+        <p>With email it's not always clear cut what the highest and lowest
+        spec scenarios are. Desktop will have much greater screen real estate to play with while mobile
+      will often offer much more css support.</p>
+
+        <p>It can be helpful to establish some precedence in terms of
+        connecting with and enhancing experience for core customers and their
+        technology vs the compromises required to reach further and further
+        outlier clients. Simple things like ranking email clients, devices,
+        customer profiles, even user case scenarios in order of priority can
+        help to inform the logistics of what is eventually built.</p>
+
+        <h2>Bandwidth And Cost</h2>
+
+        <blockquote>
+            Extra material contributes to poor usability and may add
+            considerably to the cost of the retrieval. <cite>W3 Web
+            Standards</cite>
+        </blockquote>
+
+        <p> Reducing content and file size with...</p>
+
+        <h3>Image File Formats</h3>
+
+        <p>Appropriate use of gif, jpg and even png. Also, the whys and
+        wherefores of using @1.5 or @2x (high res) assets.</p>
+
+        <h3>Image Compression</h3>
+
+        <p>Beyond 'save for web' exploring avenues like <a target="_blank" href="https://www.jpegmini.com/">				  		Jpeg Mini</a>, <a target="_blank" href="https://imageoptim.com/">Image Optim</a>, <a target="_blank" href="https://luci.criosweb.ro/riot/">RIOT</a>.
+        Even high res images can be heavily compressed - but there are <a href="../retina-resolutions/index.html">pros and
+        cons</a>.</p>
+
+        <h3>Economical Html</h3>
+
+        <p>There's generally more than one way to bake an email cake. e.g.
+        Sometimes using multiple nested tables or rows for text blocks is the
+        only way to get consistency for paragraphing and stylings but once in a
+        while you can get away with employing <code class="language-markup">&lt;br/&gt;</code> and <code class="language-markup">&lt;span&gt;</code> tags
+        to ditch a few kb.</p> 
+        
+        <p><a target="_blank" href="https://www.textfixer.com/html/compress-html-compression.php">Code compressors </a>can be useful to crush down a few kb. Of course, if it's a template that will see regular
+        use  it can be lean but a bit of readable 'paragraphing' and
+        the occasional <code class="language-markup">&lt;!-- comment --&gt;</code> may be worth retaining.</p>
+
+        <h3>Economical Content</h3>
+
+        <p>Probably the most obvious and possibly  most ignored. Less is
+        very often more, especially where screen real estate and attention span
+        are at a premium. </p>
+        
+        <p>Cutting image download weight and improving accessibility where appropriate e.g. Ideally we're employing html text/system fonts for our body copy but even in cases where some text is rendered as image there's still scope to use html for certain visual elements and to create spacing and background colours - slicing headers and banners without masses of redundant white space.</p>
+        <p>Most techniques employed to hide content from mobile
+          viewers (the reliable ones so far as I can ascertain anyway) will not
+          prevent that content from being downloaded so be prepared to consider
+          compromises that cater for an expanding audience on handheld
+          devices.</p>
+
+        <p>Even if you're not reducing download weight by suppressing certain
+        content where possible - there's still a value to streamlining the
+        user's path...</p>
+
+        <h2>User Goals</h2>
+
+        <blockquote>
+            Mobile users typically have different interests to users of fixed
+            or desktop devices. Equally, mobile users are typically less
+            interested in lengthy documents or in browsing&#8230; Some services
+            and information are more suitable for and targeted at particular
+            user contexts. <cite>W3 Web Standards</cite>
+        </blockquote>
+
+        <h3>Alternate content &amp; CTAs</h3>
+
+        <p>Designing with scalability in mind or employing media queries to
+        adapt the layout. Ideally a bit of both.</p>
+
+        <p>Where there's media query support:</p>
+
+        <ul>
+            <li>Low priority content can be hidden to streamline the
+            experience</li>
+
+            <li>Users can also be channeled to an alternate url with a bit of
+            extra coding that doesn't rely on javascript.</li>
+
+            <li>Linking to an app or app store could be appropriately targeted
+            to the mobile user.</li>
+
+            <li>Sometimes an <a target="_blank" href="https://www.emaildesignreview.com/email-design-best-practice/how-should-we-design-html-emails-for-mobile-users-817/">"add to wishlist"</a> might be more appropriate than a
+            "shop now" for mobile users. </li>
+        </ul>
+
+        <p>We might automatically regard mobile as the lesser sibling of
+        desktop but with the restrictions of desktop &amp; webmail defining the
+        'Default Delivery Context' is not so straightforward&#8230;TBC</p>
+    </article>
+
+    <footer class="articles-all">
+        <div class="footertext group">
+            <div id="copyright">
+                copyright © John Hampton 2018
+            </div>
+      </div>
+</footer><script src="../../css/footer.scripts.js" type="text/javascript"></script><!-- Localized -->
+</body>
+</html>
