@@ -1,0 +1,122 @@
+
+        input{
+          display: none;
+        }    
+
+
+       #MessageViewBody .thumb-carousel { display: none !important; }
+        #MessageViewBody .cboxcheck:checked + input + * .fallback{
+        display:block !important;
+        max-height: none;
+        height: auto;
+        overflow: visible;
+      }
+
+
+    @media screen and (max-width:9999px){
+       .youview {
+          position: absolute;
+          bottom: 0;
+        }
+        .controls {
+            position: relative;
+        }
+      .cboxcheck:checked + input + * .thumb-carousel{
+         height: auto !important;
+         max-height:none!important;
+         max-width:none!important;
+         line-height:0;
+         position: relative;
+      }
+      .thumb-carousel span {
+        font-size:0;
+        line-height:0;
+      }
+      .cboxcheck:checked + input + * .thumb-carousel .car-content{
+        display:none;
+        max-height:0px;
+        overflow:hidden;
+      }
+      .cbox0:checked + * .content-1,
+      .thumb-carousel .cbox1:checked + span .content-1,
+      .thumb-carousel .cbox2:checked + span .content-2,
+      .thumb-carousel .cbox3:checked + span .content-3,
+      .thumb-carousel .cbox4:checked + span .content-4,
+      .thumb-carousel .cbox5:checked + span .content-5 
+      {
+        display:block!important;
+        max-height:none!important;
+        overflow:visible!important;
+      }
+      .thumb-carousel .thumb{
+        cursor:pointer;
+        display:inline-block !important;
+        width:18%;
+        padding: 0 1% 0 1%;
+        margin:3% 0.61% 4.5% 0.61%;
+      }
+      .moz-text-html .thumb {
+        display:none !important;
+      }
+      .thumb-carousel .thumb:hover{
+      }
+   
+       .cbox0:checked + * .thumb-1 img.on,
+      .thumb-carousel .cbox1:checked + span .thumb-1 img.on,
+      .thumb-carousel .cbox2:checked + span .thumb-2 img.on,
+      .thumb-carousel .cbox3:checked + span .thumb-3 img.on
+    
+      {
+        display:block !important;
+      }
+      .cbox0:checked + * .thumb-1 img.off,
+      .thumb-carousel .cbox1:checked + span .thumb-1 img.off,
+      .thumb-carousel .cbox2:checked + span .thumb-2 img.off,
+      .thumb-carousel .cbox3:checked + span .thumb-3 img.off
+      {
+        display:none !important;
+
+      }
+
+      .thumb-carousel .thumb img{
+        width:100%;
+        height: auto;
+      }
+      .thumb-carousel img{
+        max-height: none !important;
+      }      
+      .cboxcheck:checked + input + * .fallback{
+        display:none !important;
+        display:none;
+        max-height: 0px;
+        height: 0px;
+        overflow: hidden;
+      }
+    }
+
+     @media only screen and (max-width: 680px) {
+ 
+       
+      .car-table.responsive,
+      .car-table.responsive .thumb-carousel,
+      .car-table.responsive .thumb-carousel .car-content img,
+      .car-table.responsive .fallback .car-content img
+       {
+        height:auto;
+       }
+
+
+
+}
+ 
+    @media screen yahoo {
+      .thumb-carousel{
+        display:none!important;
+      }
+      .fallback{
+        display:block!important;
+        height:auto!important;
+        max-height:none!important;
+      }
+
+    }

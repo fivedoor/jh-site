@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141689378-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141689378-1');
+</script>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+
+    <title>John Hampton</title>
+    <meta charset="UTF-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="John Hampton design illustration production" name=
+    "description">
+    <meta content="John Hampton" name="author"><!-- Mobile Specific Metas
+  ================================================== -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- CSS
+  ================================================== -->
+    <link href="../../css/fonts-stylesheet.css" rel="stylesheet" type=
+    "text/css">
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="../../css/style-ie.css" />
+<![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" href="../../css/style-ie.css" />
+<![endif]-->
+    <!-- Fonts
+  ================================================== -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900|Lora:400,400i,700,700i"
+    rel="stylesheet" type="text/css">
+    <link href="../../css/prism.css" rel="stylesheet" type="text/css">
+    <script src="../../css/prism.js" type="text/javascript"></script><!-- Javascript
+    ================================================== -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+$(function() {
+    $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+            $('#toTop').fadeIn();   
+        } else {
+            $('#toTop').fadeOut();
+        }
+    });
+
+    $('#toTop').click(function() {
+        $('body,html').animate({scrollTop:0},800);
+    }); 
+    });
+    </script>
+</head>
+
+<body class="article-page">
+    <div id="toTop">
+        Back to Top
+    </div><!-- header starts   -->
+
+    <header class="global group entry">
+        <img alt="" id="logo1" src="../../images/logo/JH_logo2-39.png"> 
+        
+
+        <nav>
+            <ul id="navlist">
+                <li><a class="page" href="../../home.html">journal</a></li>
+
+                <li><a href="../../about.html" id="aboutpage">about</a></li>
+            </ul>
+        </nav>
+    </header><!-- header ends   -->
+
+    <article class="grey">
+        <div class="article-preview group">
+            <div class="picpost-text-left">
+                <div class="date">
+                    26.04.13
+                </div>
+
+                <h1><span class="titles-med">Device Targeted Email
+                Content</span> <span class="numb">(ii)</span></h1>
+
+                <p>An improved approach to the previously posted client-side
+                slight of hand that enables mobile-only content &#8230;</p>
+            </div>
+
+            <div class="picpost-right" id="code12">
+            
+            </div>
+        </div>
+    </article>
+
+    <article class="group main">
+        <h2 class="intro">Altered Hierarchy without Altered Images</h2>
+
+        <p>Hidden reference to 80's new wave band - tick. Hidden content in
+        email...</p>
+
+        <p>It seems the world has been cottoning on to the usefulness of device
+        (or more precisely mail app) targeted content in email. The approach I
+        first used back in 2012 gets the job done but feels a bit dated now
+        (like the sound of <a target="_blank" href=
+        "http://www.youtube.com/watch?v=dfqPJp7Q7qE">Altered Images</a>).</p>
+
+        <p>Still lots of caveats but worth highlighting a <a target="_blank" href=
+        "https://www.campaignmonitor.com/forums/post/29814/#p29814">similar
+        approach posted on Campaign Monitor's blogs</a> which improves on the
+        method I'd previously described. It probably degrades a bit less
+        gracefully in older versions of Lotus but overall yields better results
+        in Outlook and Gmail and is all round a bit less clunky.</p>
+
+        <h5>CSS</h5>
+        <pre>
+<code class="language-css">@media all and (max-device-width: 480px) {
+    *[class*=&quot;mobile-only&quot;] {
+    display: block !important;
+    max-height: none !important;
+    }
+}</code>
+</pre>
+
+        <h5>HTML</h5>
+        <pre>
+<code class=
+"language-markup">&lt;div class=&quot;mobile-only&quot; style=&quot;font-size: 0; max-height: 0; overflow: hidden; display: none;&quot;&gt;
+&lt;!--  Image or Text Content Here --&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+        <p>One thing I like about the technique is the way it can be used not
+        just to present alternative content but also to play with the structure
+        of existing resource for an alternate mobile layout. This gives a bit
+        of scope to alter the hierarchy of the email without generating extra
+        content.</p>
+
+        <p>Background images have long been recommended as a means to serve an
+        improved experience for a header or other elements of a layout on
+        mobile. But background images have been revealed to have their own
+        <a target="_blank" href="http://stylecampaign.com/blog/2012/09/">draw backs</a> and
+        creating an alternative link for a bg image has also been a stumbling
+        block.</p>
+
+        <p>When generating template wireframes I've used the technique to try
+        and allow for slightly more free form, less predictable layouts.</p><img alt=" "
+        class="article-img article-img-caption" src=
+        "../../images/articles/TON_designs5.jpg">
+
+        <p class="caption">Part of an adaptive email for The Outnet. With one
+        extra instance of an image tag hidden from desktop view + media queries
+        support we can create the single column mobile layout</p>
+
+        <p>Granted it's not exactly in the ethics of best web practice to be
+        repeating instances of the same content in this way. Not to eschew an
+        ethos of respecting web standards but it can also pay to be pragmatic
+        in a domain were they are not well adhered to. I think one has to be
+        lead by the impetus for engagement when validating an approach. The
+        take away being - an email should be like Kurt Russell - it doesn't
+        always play by the rules but it goddamn gets results.</p>
+
+        <p>The duplicate image tag has its uses, all be it probably quite
+        niche. I've found it useful for campaigns were the requirement of 'look
+        and feel' takes priority. Sometimes that poses specific challenges so
+        anything that can be exploited within those parameters to allow for
+        more freedom or variation in the design or improve the experience
+        beyond desktop is valuable.</p>
+
+        <p>The approach requires additional html but means not always needing
+        to generate additional mobile resource or download extra image content
+        to generate an improved mobile layout for media query friendly email
+        clients.</p>
+    </article>
+
+    <footer class="articles-all">
+  <div class="footertext group">
+            <div id="copyright">
+                copyright © John Hampton 2018
+            </div>
+            
+        </div>
+    </footer><script src="../../css/footer.scripts.js" type="text/javascript"></script><!-- Localized -->
+</body>
+</html>
